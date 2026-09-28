@@ -1,12 +1,8 @@
 class Solution(object):
     def maxNumberOfBalloons(self, text):
         count = {}
-
-        # Count characters
         for ch in text:
             count[ch] = count.get(ch, 0) + 1
-
-        # Get required counts
         b = count.get('b', 0)
         a = count.get('a', 0)
         l = count.get('l', 0) // 2
